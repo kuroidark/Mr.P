@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="startpagecolor">#444343</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#dddddd</color>
+    <color name="gay">#A4A4A7</color>
+    <color name="pink">#D088E1</color>
+    <color name="blue">#48b8f3</color>
+    <color name="green">#6DCB4A</color>
+    <color name="yellow">#F4CE33</color>
+    <color name="orange">#F8A633</color>
+    <color name="red">#FE6258</color>
+</resources>

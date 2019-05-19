@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="YourAccount"></dbname>
+
+    <version value="2"></version>
+
+    <list>
+
+        <mapping class="io.github.ryuu.mrp.data.litepal.Account"></mapping>
+
+    </list>
+
+    <storage value="Android/data/io.github.ryuu.mrp/database"/>
+
+</litepal>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/account_add"
+        android:icon="@drawable/ic_add"
+        android:title="添加"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/data_export"
+        android:icon="@drawable/ic_backup"
+        android:title="备份"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data_import"
+        android:icon="@drawable/ic_import"
+        android:title="恢复"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.ryuu.mrp">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".userinterface.Authentication"
+            android:theme="@style/StartedTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:theme="@style/StartedTheme" />
+        <activity
+            android:name=".userinterface.Home"
+            android:label="Mr.P"
+            android:theme="@style/Transparented" />
+        <activity
+            android:name=".userinterface.AccountEdit"
+            android:theme="@style/EditPage" />
+        <activity
+            android:name=".userinterface.BindsRepeatsList"
+            android:theme="@style/EditPage" />
+        <activity android:name=".userinterface.ViewAccount"
+            android:theme="@style/EditPage" />
+    </application>
+
+</manifest>
