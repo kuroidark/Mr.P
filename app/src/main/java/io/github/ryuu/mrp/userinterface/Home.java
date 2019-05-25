@@ -1,5 +1,8 @@
 package io.github.ryuu.mrp.userinterface;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -110,16 +113,7 @@ public class Home extends AppCompatActivity {
 //                } else {
 //                    Log.d("信息","直接就删除失败了呗");
 //                }
-                if (DataFile.input()==true) {
-                    Snackbar.make(getWindow().getDecorView(),"已恢复",Snackbar.LENGTH_SHORT).show();
-                } else {
-                    Snackbar.make(getWindow().getDecorView(),"恢复失败", Snackbar.LENGTH_SHORT).setAction("详细", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Snackbar.make(getWindow().getDecorView(),"请将备份文件夹置于存储根目录",Snackbar.LENGTH_LONG).show();
-                        }
-                    }).show();
-                }
+                showDialog();
                 break;
             case R.id.data_export:
                 //导出数据库
@@ -194,6 +188,29 @@ public class Home extends AppCompatActivity {
 //        mTabLayout.setupWithViewPager(mViewPager);
         initView(saved);
         Log.d("是否在前台：","是");
+    }
+
+    private void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("覆盖当前所有信息？");
+        builder.setMessage("恢复备份将会覆盖现存的账户信息，请确认是否继续");
+        builder.setNegativeButton("取消", null);
+        builder.setPositiveButton("覆盖", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (DataFile.input()==true) {
+                    Snackbar.make(getWindow().getDecorView(),"已恢复",Snackbar.LENGTH_SHORT).show();
+                } else {
+                    Snackbar.make(getWindow().getDecorView(),"恢复失败", Snackbar.LENGTH_SHORT).setAction("详细", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Snackbar.make(getWindow().getDecorView(),"请将备份文件夹置于存储根目录",Snackbar.LENGTH_LONG).show();
+                        }
+                    }).show();
+                }
+            }
+        });
+        builder.show();
     }
 
 }

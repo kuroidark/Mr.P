@@ -25,8 +25,8 @@ public class DataFile {
                 +"YourAccount.db-wal";
 
         boolean success=copyFile(dbpath, Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db");
-        success=copyFile(dbpath2, Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-shm");
-        success=copyFile(dbpath3, Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-wal");
+        copyFile(dbpath2, Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-shm");
+        copyFile(dbpath3, Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-wal");
         Log.d("路径：",dbpath);
         return success;
     }
@@ -41,8 +41,8 @@ public class DataFile {
         //deleteFile(Environment.getExternalStorageDirectory()+"/Android/data/io.github.ryuu.mrp/database/YourAccount.db-shm");
 //        deleteFile(Environment.getExternalStorageDirectory()+"/Android/data/io.github.ryuu.mrp/database/YourAccount.db-wal");
         boolean success=copyFile(Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db", dbpath);
-        success=copyFile(Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-shm", dbpath2);
-        success=copyFile(Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-wal", dbpath3);
+        copyFile(Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-shm", dbpath2);
+        copyFile(Environment.getExternalStorageDirectory() + "/Mrp/YourAccount.db-wal", dbpath3);
         return success;
     }
 

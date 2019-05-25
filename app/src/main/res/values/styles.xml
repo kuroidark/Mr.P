@@ -24,6 +24,7 @@
         <item name="android:navigationBarColor">@color/colorPrimary</item>
         <item name="android:windowAnimationStyle">@android:anim/cycle_interpolator</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="alertDialogTheme">@style/Theme.MaterialComponents.Light.Dialog.Alert</item>
     </style>
 
     <style name="EditPage" parent="AppTheme">
